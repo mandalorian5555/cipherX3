@@ -9,6 +9,12 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+app.get('/new', (req, res) => {
+  res.render('pages/newlayout', {
+      title: 'Search',
+      header: "<%- include('../partials/header'); %>" 
+  });
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -21,9 +27,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 //---
-app.get('/billing', indexRouter);
+app.get('/explore', indexRouter);
 
-app.get('/profile', indexRouter);
+app.get('/Analyze', indexRouter);
+
 
 app.get('/rtl', indexRouter);
 
@@ -31,9 +38,8 @@ app.get('/signin', indexRouter);
 
 app.get('/signup', indexRouter);
 
-app.get('/tables', indexRouter);
+app.get('/download', indexRouter);
 
-app.get('/vr', indexRouter);
 
 
 //---

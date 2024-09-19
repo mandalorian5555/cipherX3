@@ -3,11 +3,15 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('pages/dashboard');
+  res.render('pages/search');
 });
 
-router.get('/billing', function(req, res) {
-  res.render('pages/billing');
+router.get('/explore', function(req, res) {
+  res.render('pages//explore');
+});
+
+router.get('/Analyze', function(req, res) {
+  res.render('pages/Analyze');
 });
 
 router.get('/profile', function(req, res) {
@@ -26,12 +30,10 @@ router.get('/signup', function(req, res) {
   res.render('pages/signup');
 });
 
-router.get('/tables', function(req, res) {
-  res.render('pages/tables');
-});
+
 
 router.get('/vr', function(req, res) {
-  res.render('pages/virtualreality');
+  res.render('pages/download');
 });
 
 
