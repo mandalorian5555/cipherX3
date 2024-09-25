@@ -1,0 +1,24 @@
+<div class="card" style="border-style:outset; border-width:5px">
+    <div class="card-body p-3">
+        <div class="row align-items-center">
+            <div class="col-8">
+                <div class="numbers d-flex align-items-center">
+                    <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md me-3">
+                        <i class="ni ni-planet text-lg opacity-10" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm mb-0 text-capitalize font-weight-bold">
+                            <%= typeof title != 'undefined' ? title : 'default' %>
+                        </p>
+                        <h5 class="font-weight-bolder mb-0">
+                            <%= typeof text1 != 'undefined' ? text1 : 'default' %>
+                            <span class="text-success text-sm font-weight-bolder">
+                                <%= typeof text2 != 'undefined' ? text2 : 'default' %>
+                            </span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

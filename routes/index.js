@@ -3,11 +3,17 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('pages/search');
+  carddata= {
+    card1:{title: 'title1',text1:'text1',text2:'text2'},
+    card2:{title: 'title2',text1:'text1',text2:'text2'},
+    card3:{title: 'title3',text1:'text1',text2:'text2'},
+    card4:{title: 'title4',text1:'text1',text2:'text2'}}
+    
+  res.render('pages/search',{carddata:carddata});
 });
 
 router.get('/explore', function(req, res) {
-  res.render('pages//explore');
+  res.render('pages/explore');
 });
 
 router.get('/Analyze', function(req, res) {
