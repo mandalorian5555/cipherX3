@@ -4,12 +4,12 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   carddata= {
-    card1:{title: 'title1',text1:'text1',text2:'text2'},
-    card2:{title: 'title2',text1:'text1',text2:'text2'},
-    card3:{title: 'title3',text1:'text1',text2:'text2'},
-    card4:{title: 'title4',text1:'text1',text2:'text2'}}
+    card1:{title: 'Query by',text1:'Identifier',text2:'',icon:'ni-planet'},
+    card2:{title: 'Query by',text1:'Coordinates',text2:'',icon:'ni-laptop'},
+    card3:{title: 'Query by',text1:'External ID',text2:'',icon:'ni-planet'},
+    card4:{title: 'Query by',text1:'User Cretiria',text2:'',icon:'ni-planet'}}
     
-  res.render('pages/search',{carddata:carddata});
+  res.render('pages/Shell',{carddata:carddata});
 });
 
 router.get('/explore', function(req, res) {

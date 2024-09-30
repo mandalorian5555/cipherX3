@@ -1,10 +1,36 @@
-<div class="card" style="border-style:outset; border-width:5px">
+<style>
+.hover-icon {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: all 0.3s ease;
+}
+
+.icon-default {
+    transition: opacity 0.3s ease;
+}
+
+.icon-hand {
+    transition: opacity 0.3s ease;
+}
+
+.hover-icon:hover .icon-default {
+    display:block /*  default icon change if you think its helpful */
+}
+
+.hover-icon:hover .icon-hand {
+    display: inline-block; /* Show the hand icon on hover */
+}
+</style>
+
+<div class="card hover-icon" style="border-style: outset; border-width: 5px;">
     <div class="card-body p-3">
         <div class="row align-items-center">
             <div class="col-8">
                 <div class="numbers d-flex align-items-center">
                     <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md me-3">
-                        <i class="ni ni-planet text-lg opacity-10" aria-hidden="true"></i>
+                        <!-- Default Icon -->
+                        <i class="ni <%= typeof icon != 'undefined' ? icon : 'ni-planet' %> text-lg opacity-10 icon-default" aria-hidden="true"></i>
+                        <!-- Hand Icon -->
+                        <i class="ni ni-finger text-lg opacity-10 icon-hand" style="display: none;" aria-hidden="true"></i>
                     </div>
                     <div>
                         <p class="text-sm mb-0 text-capitalize font-weight-bold">
