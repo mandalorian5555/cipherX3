@@ -12,6 +12,7 @@ router.get('/', function(req, res, next) {
   res.render('pages/Shell',{carddata:carddata});
 });
 
+/*
 router.get('/explore', function(req, res) {
   res.render('pages/explore');
 });
@@ -41,6 +42,7 @@ router.get('/signup', function(req, res) {
 router.get('/vr', function(req, res) {
   res.render('pages/download');
 });
+*/
 
 
 module.exports = router;

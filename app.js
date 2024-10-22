@@ -27,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 //---
+/*
 app.get('/explore', indexRouter);
 
 app.get('/Analyze', indexRouter);
@@ -39,7 +40,7 @@ app.get('/signin', indexRouter);
 app.get('/signup', indexRouter);
 
 app.get('/download', indexRouter);
-
+*/
 
 
 //---
